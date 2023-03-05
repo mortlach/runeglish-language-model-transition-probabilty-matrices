@@ -109,7 +109,7 @@ class LanguageModel:
         if not model:
             return 0
         if a not in model:
-            return math.log(1/LanguageModel.max_counts[ng])
+            return -40.0
         return model.get(a, {}).get(b, model[a].get('zero_score', -9999))
 
     def get_logprob_b_given_rune_a(self, b, a=None, ng=1):
