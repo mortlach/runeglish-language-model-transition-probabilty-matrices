@@ -246,7 +246,7 @@ if __name__ == "__main__":
     s = "".join([random.choice(runes) if r in runes and random.random() < 0.01 else r for r in test_rune_text])
     print(s==test_rune_text)
     rune_score, wli_rune_score = lm.get_phrase_all_prob(s)
-    print(f'Main Test Phrase: {s} ')
+    print(f'NEW Test Phrase: {s} ')
     print(f'Rune only score:')
     [print(f'ng = {x} total_score = {rune_score[x][0]} score /ng = {rune_score[x][1]}') for x in range(len(rune_score))]
     print(f'Rune with (W)ord (L)ength and (I)ndex Score:  {wli_rune_score} ')
